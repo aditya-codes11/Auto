@@ -1,0 +1,48 @@
+Playwright Incremental- Best Practices
+1. Coding Standards
+•	Use camelCase for methods and variables. 
+o	Example: clickOnSearchBar()
+•	Use UPPERCASE for locators. 
+o	Example: SEARCH_BAR
+•	Use Pascal for Class Name. 
+o	Example: HomePage
+•	Use meaningful names for files, folders, classes, methods, and variables.
+2. Exception Handling
+•	Every function must contain a try-catch block.
+•	Try Block: 
+o	logger.info()
+o	runReport.record()
+o	Execution of the action
+o	Verification of the action result
+•	Catch Block: 
+o	logger.error()
+o	runReport.record()
+o	Screenshot.capture()
+o	Re-throw the exception
+3. Logging and Reporting
+•	Log the start and completion of every action.
+•	Capture all failures in reports.
+•	Maintain timestamp-based logs for easy debugging.
+4. Function Documentation
+Every method must have proper JSDoc comments.
+TypeScript
+/**
+* Author: 
+* Method Name: 
+* Description:
+* Parameters: 
+* Return Type: 
+*/
+5. Framework Utilities
+Create reusable utility classes for:
+•	Logger
+•	Screenshot
+•	Report
+•	WebDriver Helper
+
+8. Verification Standards
+•	Every user action must be followed by a verification step.
+•	Examples: 
+o	Click → Verify navigation/visibility.
+o	Enter Text → Verify entered value.
+o	Submit Form → Verify success message.
